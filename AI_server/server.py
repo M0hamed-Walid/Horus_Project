@@ -3,6 +3,7 @@ from PIL import Image
 import os
 import numpy as np
 import base64
+import io
 import tensorflow as tf
 import json
 
@@ -32,9 +33,9 @@ def predectionPage():
     
     image_data = data['image']
     image_bytes = base64.b64decode(image_data)
+    image_bytes = io.BytesIO(image_bytes)
 
-
-    image = Image.frombytes(image_bytes)
+    image = Image.open(image_bytes)
 
 
     # Preprocess the image
