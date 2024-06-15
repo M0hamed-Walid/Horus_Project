@@ -38,7 +38,7 @@ def predectionPage():
     file_path = os.path.join("./images", filename)
     with open(file_path, 'wb') as f:
         f.write(image_bytes)
-    image = Image.open("./images/image_to_predect")
+    image = Image.open("./AI_server/images/image_to_predect")
 
 
     # Preprocess the image
