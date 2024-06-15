@@ -34,11 +34,7 @@ def predectionPage():
     image_bytes = base64.b64decode(image_data)
 
 
-    filename = 'image_to_predect'  
-    file_path = os.path.join("./images", filename)
-    with open(file_path, 'wb') as f:
-        f.write(image_bytes)
-    image = Image.open("./AI_server/images/image_to_predect")
+    image = Image.frombytes(image_bytes)
 
 
     # Preprocess the image
