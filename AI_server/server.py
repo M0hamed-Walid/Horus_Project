@@ -22,7 +22,7 @@ classes=['Statue of Akhenaten',
 
 
 app = Flask("app");
-model = loaded_model = tf.keras.models.load_model('./model.h5', compile=False)
+model = loaded_model = tf.keras.models.load_model('./AI_server/model.h5', compile=False)
 @app.get("/predect")
 def predectionPage():
     data = request.get_json()
